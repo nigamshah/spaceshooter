@@ -6,3 +6,7 @@
 *.csproj
 *.unityproj
 *.sln
+unity/Assembly-UnityScript.pidb
+unity/spaceshooter.userprefs
+unity/Assembly-CSharp-Editor.pidb
+unity/Assembly-CSharp.pidb
