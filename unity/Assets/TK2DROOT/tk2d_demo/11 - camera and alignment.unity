@@ -333,7 +333,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.5219727, y: -12.272583, z: 0}
+  m_LocalPosition: {x: -11, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 35}
@@ -713,7 +713,6 @@ MonoBehaviour:
   _maxChars: 500
   _inlineStyling: 0
   _formatting: 0
-  _formattedText: 
   _wordWrapWidth: 0
   pixelPerfect: 0
   spacing: 0
@@ -779,7 +778,6 @@ MonoBehaviour:
   _maxChars: 16
   _inlineStyling: 0
   _formatting: 0
-  _formattedText: 
   _wordWrapWidth: 0
   pixelPerfect: 0
   spacing: 0
@@ -895,7 +893,7 @@ MonoBehaviour:
   nativeResolutionHeight: 640
   enableResolutionOverrides: 1
   mainCamera: {fileID: 37}
-  forceResolutionInEditor: 0
+  forceResolutionInEditor: 1
   forceResolution: {x: 960, y: 640}
 --- !u!196 &66
 NavMeshSettings:

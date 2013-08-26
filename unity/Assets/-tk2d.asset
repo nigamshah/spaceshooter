@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cb500cf0f58e74f9a52a8af931edde, type: 3}
+  m_Name: -tk2d
+  m_EditorClassIdentifier: 
+  version: 3
+  spriteAnimationIndex:
+  - assetGUID: 18a39674a9b14f54b97497254e83b349
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  - assetGUID: 68cc4da10d501f9439d1507a1a2c46c1
+    dataGUID: 
+    managed: 0
+    loadable: 0
+  fontIndex:
+  - assetGUID: 063b15d80dbb4604d890600a64c79cf8
+    dataGUID: e7a6b09a73c6b2b4f8060096ddbd3b5e
+    managed: 0
+    loadable: 0
+  - assetGUID: 5b9fac241be038041b70ac7e84cd6151
+    dataGUID: 3082bbcb45b417041963b6b8562266c1
+    managed: 0
+    loadable: 0
+  - assetGUID: db60ffa92fa16ea478fc7ad4f595a0e6
+    dataGUID: 44e006873ca04f741b2ac3ba5dec92ad
+    managed: 0
+    loadable: 0
+  spriteCollectionIndex:
+  - name: DemoMultiAtlas
+    spriteCollectionGUID: 6abdf3241ce81204293a7d50f971e3d7
+    spriteCollectionDataGUID: e40f26e01721f87448061d44beed20dd
+    spriteNames:
+    - explosion_44FR/0
+    - explosion_44FR/1
+    - explosion_44FR/2
+    - explosion_44FR/3
+    - explosion_44FR/4
+    - explosion_44FR/5
+    - explosion_44FR/6
+    - explosion_44FR/7
+    - explosion_44FR/8
+    - explosion_44FR/9
+    - explosion_44FR/10
+    - explosion_44FR/11
+    - explosion_44FR/12
+    - explosion_44FR/13
+    - explosion_44FR/14
+    - explosion_44FR/15
+    - explosion_44FR/16
+    - explosion_44FR/17
+    - explosion_44FR/18
+    - explosion_44FR/19
+    - explosion_44FR/20
+    - explosion_44FR/21
+    - explosion_44FR/22
+    - explosion_44FR/23
+    - explosion_44FR/24
+    - explosion_44FR/25
+    - explosion_44FR/26
+    - explosion_44FR/27
+    - explosion_44FR/28
+    - explosion_44FR/29
+    - explosion_44FR/30
+    - explosion_44FR/31
+    - explosion_44FR/32
+    - explosion_44FR/33
+    - explosion_44FR/34
+    - explosion_44FR/35
+    - explosion_44FR/36
+    - explosion_44FR/37
+    - explosion_44FR/38
+    - explosion_44FR/39
+    - explosion_44FR/40
+    - explosion_44FR/41
+    - explosion_44FR/42
+    - explosion_44FR/43
+    spriteTextureGUIDs:
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    - f38c1e9651d69654c87ea0956466e36d
+    spriteTextureTimeStamps:
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    - 1377006868
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: BlocksCollection
+    spriteCollectionGUID: cf65f8847f5ce4997ab508ba75d8e3f7
+    spriteCollectionDataGUID: 25ff3e09578b84076ba01ddf20e5b1e9
+    spriteNames:
+    - colorBurst
+    - magneticBackground_blue
+    - magneticBackground_red
+    - magneticBackground_green
+    - magneticBackground_purple
+    - pop_purple
+    - block_purple_normal
+    - block_green_normal
+    - block_blue_normal
+    - block_red_normal
+    - pop_blue
+    - 
+    - 
+    - pop_green
+    - pop_red
+    spriteTextureGUIDs:
+    - 707bebb1e66d146eb802d63d82155424
+    - 5ca218b5a0e08451b8d0eb6978cce953
+    - 3cf4f4d4c35a54448b1179fc6d2fddc1
+    - a6a9a323ba99f4fb99ab4bf201d66e62
+    - a60bc703eae0443469db0d4afc7c3c63
+    - 08f8a4525373d4323a35fb6e38a40628
+    - 062fc6b9a01764e14b1571f4647d559e
+    - 27fe50b2d2b4342219d9949589ea3940
+    - 3e04cf924c4cd400b9d2f4ded2798143
+    - c67a1bdf6023345668ce0a949508d85c
+    - 2d4d00ed4d8a24c71a9f34ed4bd389e3
+    - 
+    - 
+    - 0cb061cc07ee9475b8487d0248b51441
+    - 93fbfa3f38eee482e83d8bec885aa75e
+    spriteTextureTimeStamps:
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 0
+    - 0
+    - 1377006867
+    - 1377006867
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Spaces
+    spriteCollectionGUID: 44eea9b064baf4606b751fc654d80ded
+    spriteCollectionDataGUID: 2ca5b608f7105435fa4cdb9dce47b17e
+    spriteNames:
+    - cell_smallCollider
+    - cell_fullCollider
+    spriteTextureGUIDs:
+    - 76fac376bcfc94d749669d4432e3955c
+    - 76fac376bcfc94d749669d4432e3955c
+    spriteTextureTimeStamps:
+    - 1377006867
+    - 1377006867
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: SymbolsCollection
+    spriteCollectionGUID: 2590e63bd0ce249d2be0469efba05e3c
+    spriteCollectionDataGUID: cecf7b34e669345ffbb2a82c785cccb0
+    spriteNames:
+    - tile
+    - camel
+    - broom
+    - ankh
+    - cat
+    - pyramid
+    - eye
+    - sarcophagus
+    - crab
+    - tree
+    - tile_white
+    - tile_black
+    spriteTextureGUIDs:
+    - c251fa2221dba455b896beaeb28a8641
+    - 07371d5ec559843ffb8f44ccb6b15958
+    - 253c5db09575944e0b260f93f633aeb6
+    - 528905bc3c1f9424fae5c28b4a15519f
+    - 53503f7f90c3d4078bc66c774370f547
+    - 61e941e86b5304c1d86be5f1deff1fb9
+    - 78e1fed680edb4fb49130b9548acd2eb
+    - 7fd13bbe334214813854148bfda82394
+    - cccaada8001cb4400aa4a3538ffdd9f1
+    - ff366ddfdddd14aadb5a9f08278c3faf
+    - e345dd7c312c9450191c1b30cb7b5e24
+    - e9907105811db4816bbe9ef565c2a1ca
+    spriteTextureTimeStamps:
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006867
+    - 1377006868
+    - 1377006868
+    - 1377006867
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
+  - name: Mask
+    spriteCollectionGUID: 6a04f93092bd04ce68a7a69fc339b96f
+    spriteCollectionDataGUID: a089b00c3656f44b7818801c400db135
+    spriteNames:
+    - black_pixel
+    spriteTextureGUIDs:
+    - ca2888effcef249f386972f7094c60b6
+    spriteTextureTimeStamps:
+    - 1377006867
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
