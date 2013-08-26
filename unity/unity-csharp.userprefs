@@ -1,17 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Test/Tester.cs">
+    <Files>
+      <File FileName="Assets/Game/Scripts/Test/Tester.cs" Line="36" Column="20" />
+      <File FileName="Assets/Game/Scripts/Hero/PlayerMoveProvider.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Assembly-CSharp-Editor-vs" expanded="True">
-            <Node name="References" selected="True" />
-          </Node>
           <Node name="Assembly-CSharp-vs" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Game" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="Test" expanded="True" />
+                  <Node name="Hero" expanded="True" />
+                  <Node name="Test" expanded="True">
+                    <Node name="Tester.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
