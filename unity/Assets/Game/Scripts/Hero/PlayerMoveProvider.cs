@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerMoveProvider : MonoBehaviour {
 
+	private const float MIN_X = -9.5f;
+	private const float MAX_X = 9.5f;
+
 	// public vars -- can be changed in Inspector	
 	public float InitialSpeed = 25f; // Main Camera world units/second
 
@@ -18,11 +21,13 @@ public class PlayerMoveProvider : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float hAxisValue = Input.GetAxis("Horizontal");
-		//print("hAxisValue = " + hAxisValue);
-		
+
 		if (hAxisValue != 0) {
 			float translation = hAxisValue * m_currentSpeed * Time.deltaTime;
-			transform.Translate(translation, 0, 0);
+			Vector3 currentPosition = transform.position;
+			currentPosition.x += translation;
+			currentPosition.x = Mathf.Clamp(currentPosition.x, MIN_X, MAX_X);
+			transform.position = currentPosition;
 		}
 	}
 

@@ -15,20 +15,26 @@ public class Weapon : MonoBehaviour {
 	
 	private string m_inputAxisString;
 	private Quaternion m_rotation;
+	private Vector3 m_shootingPointOffset;
+
 
 	// Use this for initialization
 	void Start() {
-		Cooldown = Mathf.Max(0.1f, Cooldown);
+
+		// 0.05 seconds is the minimum cooldown, otherwise the bullets hit themselves
+		Cooldown = Mathf.Max(0.05f, Cooldown);
 		m_inputAxisString = InputAxis.ToString();
 		m_rotation = transform.rotation;
+
+		m_shootingPointOffset = new Vector3(0, 1.1f, 0);
 	}
 	
 	// Update is called once per frame
 	void Update() {
-		float fireAxisValue = Input.GetAxis("Fire1");
+		float fireAxisValue = Input.GetAxis(m_inputAxisString);
 		if (fireAxisValue != 0) {
-			print("Fire1 !!! " + fireAxisValue);
-			GameObject bullet = Instantiate(Bullet, Vector3.zero, m_rotation) as GameObject;
+			Vector3 pos = transform.position + m_shootingPointOffset;
+			GameObject bullet = Instantiate(Bullet, pos, m_rotation) as GameObject;
 			this.enabled = false;
 			Invoke("ResetCooldown", Cooldown);
 		}
