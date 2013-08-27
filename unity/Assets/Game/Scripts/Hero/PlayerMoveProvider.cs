@@ -3,12 +3,12 @@ using System.Collections;
 
 public class PlayerMoveProvider : MonoBehaviour {
 
-	// public vars -- can be changed in Inspector
+	// public vars -- can be changed in Inspector	
+	public float InitialSpeed = 25f; // Main Camera world units/second
 
-	// expressed in pixels per second
-	public float InitialSpeed = 900f;
-
-	private float m_currentSpeed = 0;
+	// TODO: Change back to private
+	// -- only public for playtesting in the Inspector
+	public float m_currentSpeed = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -21,13 +21,9 @@ public class PlayerMoveProvider : MonoBehaviour {
 		//print("hAxisValue = " + hAxisValue);
 		
 		if (hAxisValue != 0) {
-			Move(hAxisValue);
+			float translation = hAxisValue * m_currentSpeed * Time.deltaTime;
+			transform.Translate(translation, 0, 0);
 		}
-	}
-
-	void Move(float axisValue) {
-		float translation = axisValue * m_currentSpeed * Time.deltaTime;
-		transform.Translate(translation, 0, 0);
 	}
 
 	void ResetSpeed() {
