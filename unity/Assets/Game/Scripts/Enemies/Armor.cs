@@ -25,11 +25,11 @@ public class Armor : MonoBehaviour {
 			float damage = projectile.Damage;
 
 			if (m_armorPoints == 0) {
-				SendMessage("DirectHit", projectile);
+				SendMessage("DirectHit", projectile, SendMessageOptions.DontRequireReceiver);
 			} else {
 				m_armorPoints = Mathf.Max(0, m_armorPoints - damage);
 				if (m_armorPoints == 0) {
-					SendMessage("ArmorFailed");
+					SendMessage("ArmorFailed", SendMessageOptions.DontRequireReceiver);
 				}
 			}
 		}

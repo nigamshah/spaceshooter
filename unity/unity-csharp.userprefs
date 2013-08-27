@@ -1,10 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ScifiEffects/Scripts/SFE_BulletController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Enemies/EnemyWaveMoveProvider.cs">
     <Files>
-      <File FileName="Assets/Game/Scripts/Test/Tester.cs" Line="7" Column="27" />
-      <File FileName="Assets/ScifiEffects/Scripts/SFE_BulletController.js" Line="23" Column="2" />
-      <File FileName="Assets/Game/Scripts/Hero/Weapon.cs" Line="14" Column="1" />
+      <File FileName="Assets/Game/Scripts/Enemies/EnemyWaveMoveProvider.cs" Line="32" Column="3" />
+      <File FileName="Assets/Game/Scripts/Hero/PlayerMoveProvider.cs" Line="46" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,8 +12,10 @@
             <Node name="Assets" expanded="True">
               <Node name="Game" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="Enemies" expanded="True" />
-                  <Node name="Hero" expanded="True" selected="True" />
+                  <Node name="Enemies" expanded="True">
+                    <Node name="EnemyWaveMoveProvider.cs" selected="True" />
+                  </Node>
+                  <Node name="Hero" expanded="True" />
                 </Node>
               </Node>
             </Node>
