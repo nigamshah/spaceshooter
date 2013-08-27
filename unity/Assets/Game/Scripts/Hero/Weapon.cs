@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour {
 
 	// public vars can be edited in Inspector
 
-	public GameObject Bullet;
+	public GameObject Projectile;
 	public FireAxis InputAxis;
 	public float Cooldown = 0.1f;
 	
@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour {
 		float fireAxisValue = Input.GetAxis(m_inputAxisString);
 		if (fireAxisValue != 0) {
 			Vector3 pos = transform.position + m_shootingPointOffset;
-			GameObject bullet = Instantiate(Bullet, pos, m_rotation) as GameObject;
+			GameObject bullet = Instantiate(Projectile, pos, m_rotation) as GameObject;
 			this.enabled = false;
 			Invoke("ResetCooldown", Cooldown);
 		}
