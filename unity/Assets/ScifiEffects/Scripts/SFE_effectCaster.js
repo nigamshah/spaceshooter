@@ -41,7 +41,7 @@ if(Input.GetMouseButton(0)&&cooldown<=0){
 effect=Instantiate(createThis[selected], spaceShip.transform.position, spaceShip.transform.rotation);
 effect.transform.parent=spaceShip.transform;
 
-cooldown=0.5;
+cooldown=1;
 }
 
 
