@@ -25,6 +25,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Die() {
+		SendMessageUpwards("EnemyDestroyed", gameObject, SendMessageOptions.DontRequireReceiver);
 		if (KillEffect != null) {
 			Instantiate(KillEffect, transform.position, transform.rotation);
 		}
