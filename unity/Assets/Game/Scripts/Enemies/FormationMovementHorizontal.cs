@@ -16,10 +16,19 @@ public class FormationMovementHorizontal : MonoBehaviour {
 	private Formation m_formation;
 
 	// Use this for initialization
+	void Awake() {
+		this.enabled = false;
+	}
+	
+	// Use this for initialization
 	void Start () {
 		ResetSpeed();
 		m_direction = 1;
 		m_formation = GetComponent<Formation>();
+	}
+
+	private void FormationSet() {
+		this.enabled = true;
 	}
 
 	// Update is called once per frame

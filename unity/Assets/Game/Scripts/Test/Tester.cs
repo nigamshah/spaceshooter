@@ -11,6 +11,10 @@ public class Tester : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		print("Tester.Start()");
+
+		// get it started
+		SendMessage("SpawnNextWave");
+
 	}
 	
 	// Update is called once per frame

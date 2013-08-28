@@ -34,10 +34,10 @@ public class Formation : MonoBehaviour {
 	void Start () {
 		m_enemies = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
 		Reset();
+		SendMessage("FormationSet");
 	}
 
 	private void EnemyDestroyed(GameObject enemy) {
-		print("EnemyDestroyed - name = " + enemy.name);
 		Transform trans = enemy.transform;
 		m_enemies.Remove(enemy);
 
@@ -77,7 +77,7 @@ public class Formation : MonoBehaviour {
 
 	}
 	private void FormationDestroyed() {
-		print("destroying formation game object");
+		SendMessageUpwards("WaveCompleted", SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);
 	}
 

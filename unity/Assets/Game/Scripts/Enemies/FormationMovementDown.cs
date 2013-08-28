@@ -9,8 +9,15 @@ public class FormationMovementDown : MonoBehaviour {
 	private Formation m_formation;
 
 	// Use this for initialization
-	void Start () {
+	void Awake() {
+		this.enabled = false;
+	}
+	void Start() {
 		m_formation = GetComponent<Formation>();
+	}
+
+	private void FormationSet() {
+		this.enabled = true;
 	}
 	
 	// Update is called once per frame
