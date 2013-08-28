@@ -7,14 +7,14 @@ public class Formation : MonoBehaviour {
 	public const float MIN_X = -9.5f;
 	public const float MAX_X = 9.5f;
 	public const float MIN_Y = -5.5f;
-
+	public const float MAX_Y = 7.5F;
 	
 	private List<GameObject> m_enemies;
 
 	private Transform m_left;
 	private Transform m_right;
 	private Transform m_bottom;
-	private Transform m_top;	// not used for now
+	private Transform m_top;	// not used right now, but could be useful later
 
 	public Transform Top {
 		get { return m_top; }
@@ -34,7 +34,7 @@ public class Formation : MonoBehaviour {
 	void Start () {
 		m_enemies = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
 		Reset();
-		SendMessage("FormationSet");
+		BroadcastMessage("FormationSet", SendMessageOptions.DontRequireReceiver);
 	}
 
 	private void EnemyDestroyed(GameObject enemy) {
