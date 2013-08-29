@@ -1,31 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Main/WaveManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/HUD/HUD.cs">
     <Files>
-      <File FileName="Assets/Game/Scripts/Main/WaveManager.cs" Line="24" Column="1" />
+      <File FileName="Assets/Game/Scripts/Main/WaveManager.cs" Line="13" Column="2" />
       <File FileName="Assets/Game/Resources/Config/Config.txt" Line="6" Column="18" />
       <File FileName="Assets/Game/Scripts/Main/Config.cs" Line="32" Column="48" />
       <File FileName="Assets/Game/Scripts/Main/LevelManager.cs" Line="28" Column="48" />
-      <File FileName="Assets/Game/Scripts/Main/MainController.cs" Line="32" Column="17" />
+      <File FileName="Assets/Game/Scripts/Main/MainController.cs" Line="15" Column="1" />
+      <File FileName="Assets/Game/Scripts/HUD/HUD.cs" Line="19" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp-vs" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Game" expanded="True">
-                <Node name="Resources" expanded="True">
-                  <Node name="Config" expanded="True" />
-                </Node>
-                <Node name="Scripts" expanded="True">
-                  <Node name="Main" expanded="True">
-                    <Node name="WaveManager.cs" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
