@@ -36,6 +36,8 @@ public class SpacecraftController : MonoBehaviour {
 		bool enemyToPlayer = 
 			(collision.gameObject.CompareTag("Enemy") && gameObject.CompareTag("Player")) ||
 			(collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Enemy"));
+		// ^^ NOTE: I do not want a Direct Hit if it is an Enemy-To-Enemy collision
+
 
 		if (!m_hasArmor || enemyToPlayer) {
 			DirectHit();
