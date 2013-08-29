@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 
@@ -21,10 +21,8 @@ public class MovementPatternAlpha : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		m_startingPoint = transform.localPosition;
-
 		// choose a starting direction
 		ResetDirection();
-
 	}
 	
 	private void FormationSet() {

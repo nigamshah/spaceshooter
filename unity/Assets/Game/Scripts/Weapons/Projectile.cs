@@ -13,14 +13,17 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.parent = null; // detaches immediately
-		if (MuzzleFire) {
+		if (MuzzleFire != null) {
 			Instantiate(MuzzleFire, transform.position, transform.rotation);
 		}
-		rigidbody.AddForce(transform.up * ImpulseForce, ForceMode.Impulse);
+		//rigidbody.AddForce(transform.up * ImpulseForce, ForceMode.Impulse);
 	}
 
 	void OnCollisionEnter() {
-		Instantiate(Explosion, transform.position, transform.rotation);
+		if (Explosion != null) {
+			Instantiate(Explosion, transform.position, transform.rotation);
+		}
+
 		Destroy(gameObject);
 	}
 
