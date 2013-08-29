@@ -36,10 +36,8 @@ public class AutoFireRandom : MonoBehaviour {
 	}
 
 	private void TryFire() {
-		print("Try Fire");
 		bool shouldFire = ShouldFire();
 		if (shouldFire) {
-			print("SHould Fire = true");
 			FireCommand command = new FireCommand();
 			command.Direction = m_fireDirection.CurrentDirection;
 			command.FireControlString = m_fireControlString;
@@ -51,7 +49,6 @@ public class AutoFireRandom : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast(transform.position, -Vector3.up, out hit)) {
 			bool hitEnemy = hit.collider.CompareTag("Enemy");
-			print("hitEnemy = " + hitEnemy);
 			if (hitEnemy) return false;
 		}
 

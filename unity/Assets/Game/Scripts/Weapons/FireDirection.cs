@@ -12,7 +12,6 @@ public class FireDirection : MonoBehaviour {
 
 	void Awake() {
 		m_currentDirection = InitialDirection.ToVector3();
-		print("my vector = " + m_currentDirection);
 	}
 
 }

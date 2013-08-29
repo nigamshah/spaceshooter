@@ -17,7 +17,6 @@ public class HeroManager : MonoBehaviour {
 
 	private void SpawnHero() {
 		print("HeroManager.SpawnHero");
-		return;
 		// there must be at least 1
 		GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(SPAWN_POINT_TAG);
 		if (spawnPoints.Length == 0) {
@@ -34,10 +33,10 @@ public class HeroManager : MonoBehaviour {
 	}
 
 	private void SpacecraftDestroyed(GameObject craft) {
-		if (craft.name == "Hero") {
+		if (craft.CompareTag("Player")) {
 			LivesRemaining--;
 			if (LivesRemaining == 0) {
-				SendMessage("GameOver");
+				SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
 			} else {
 				Invoke("SpawnHero", SpawnDelay);
 			}

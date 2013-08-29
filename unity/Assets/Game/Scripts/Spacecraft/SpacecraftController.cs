@@ -20,7 +20,11 @@ public class SpacecraftController : MonoBehaviour {
 		renderer.enabled = true;
 	}
 
-	void DirectHit() {
+	private void ArmorFailed() {
+		print("ArmorFailed !!!!!");
+	}
+
+	private void DirectHit() {
 		// this happens after the armor has failed
 		Die();
 	}

@@ -5,7 +5,8 @@ public class Armor : MonoBehaviour {
 
 	public int StartingArmorPoints = 10;
 
-	private float m_armorPoints;
+	// TODO: Change back to private
+	public float m_armorPoints;
 
 	// Use this for initialization
 	void Start () {

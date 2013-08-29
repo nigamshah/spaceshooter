@@ -15,8 +15,8 @@ public class WaveManager : MonoBehaviour {
 
 	void Awake() {
 		m_waves = new string[2][];
-		m_waves[0] = new string[] {"EnemyWave_1.1", "EnemyWave_1.2", "EnemyWave_1.3"};
-		m_waves[1] = new string[] {"EnemyWave_1.2", "EnemyWave_1.3"};
+		m_waves[0] = new string[] {"EnemyWave_1.1", "EnemyWave_1.1", "EnemyWave_1.1"};
+		m_waves[1] = new string[] {"EnemyWave_1.1", "EnemyWave_1.1"};
 		m_levelManager = GetComponent<LevelManager>();
 	}
 
