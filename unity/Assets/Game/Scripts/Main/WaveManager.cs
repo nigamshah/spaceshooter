@@ -50,6 +50,7 @@ public class WaveManager : MonoBehaviour {
 	}
 
 	private void WaveCompleted() {
+
 		m_currentWave++;
 
 		print("Wave complete - next wave = " + m_currentWave);

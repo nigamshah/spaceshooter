@@ -6,7 +6,7 @@ public class Formation : MonoBehaviour {
 
 	public const float MIN_X = -9.5f;
 	public const float MAX_X = 9.5f;
-	public const float MIN_Y = -5.5f;
+	public const float MIN_Y = -7.5f;
 	public const float MAX_Y = 7.5F;
 	
 	private List<GameObject> m_enemies;
@@ -73,17 +73,26 @@ public class Formation : MonoBehaviour {
 		}
 	}
 
-	private void FormationAtBottom() {
-		print("Formation Landed");
+	// Update is called once per frame
+	void Update () {
+		if (Top.position.y <= MIN_Y) {
+			FormationPassed();
+		}
+	}
 
+	private void FormationPassed() {
+		print("Formation Passed");
+		SendMessageUpwards("WaveCompleted", false, SendMessageOptions.DontRequireReceiver);
+		Destroy(gameObject);
 	}
 	private void FormationDestroyed() {
-		SendMessageUpwards("WaveCompleted", SendMessageOptions.DontRequireReceiver);
+		SendMessageUpwards("WaveCompleted", true, SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);
 	}
 
 	public bool IsAtEdge() {
-		bool result = (Left.position.x <= Formation.MIN_X || Right.position.x >= Formation.MAX_X);
+		bool result = (Left.position.x <= MIN_X || Right.position.x >= MAX_X);
 		return result;
 	}
+
 }

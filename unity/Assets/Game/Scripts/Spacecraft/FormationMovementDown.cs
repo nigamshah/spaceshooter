@@ -25,9 +25,5 @@ public class FormationMovementDown : MonoBehaviour {
 		if (m_formation.IsAtEdge()) {
 			transform.Translate(new Vector3(0f, -1 * DropInterval));
 		}
-
-		if (transform.position.y <= Formation.MIN_Y) {
-			SendMessage("FormationAtBottom");
-		}
 	}
 }

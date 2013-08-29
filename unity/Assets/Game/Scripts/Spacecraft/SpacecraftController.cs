@@ -6,6 +6,8 @@ public class SpacecraftController : MonoBehaviour {
 	public GameObject SpawnEffect;
 	public GameObject KillEffect;
 
+	private bool m_hasArmor = false;
+
 	// Use this for initialization
 	void Start() {
 		if (SpawnEffect != null) {
@@ -20,16 +22,28 @@ public class SpacecraftController : MonoBehaviour {
 		renderer.enabled = true;
 	}
 
+	private void EnableArmor() {
+		m_hasArmor = true;
+	}
+
 	private void ArmorFailed() {
 		print("ArmorFailed !!!!!");
+		m_hasArmor = false;
 	}
+
+	void OnCollisionEnter(Collision collision) {
+
+		bool enemyToPlayer = 
+			(collision.gameObject.CompareTag("Enemy") && gameObject.CompareTag("Player")) ||
+			(collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Enemy"));
+
+		if (!m_hasArmor || enemyToPlayer) {
+			DirectHit();
+		}
+	}
+
 
 	private void DirectHit() {
-		// this happens after the armor has failed
-		Die();
-	}
-
-	void Die() {
 		SendMessageUpwards("SpacecraftDestroyed", gameObject, SendMessageOptions.DontRequireReceiver);
 		if (KillEffect != null) {
 			Instantiate(KillEffect, transform.position, transform.rotation);
