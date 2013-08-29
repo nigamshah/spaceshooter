@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WaveManager : MonoBehaviour {
 
@@ -7,29 +8,30 @@ public class WaveManager : MonoBehaviour {
 	private const string SPAWN_POINT_TAG = "EnemySpawnPoint";
 
 	private int m_currentWave = 0;
-	private string[][] m_waves;
+
+	private string[][] m_waveNames;
 
 	private LevelManager m_levelManager;
 
 	// Use this for initialization
 
 	void Awake() {
-		m_waves = new string[2][];
-		m_waves[0] = new string[] {"EnemyWave_1.1", "EnemyWave_1.1", "EnemyWave_1.1"};
-		m_waves[1] = new string[] {"EnemyWave_1.1", "EnemyWave_1.1"};
 		m_levelManager = GetComponent<LevelManager>();
 	}
+	void Start() {
+		Config config = GetComponent<Config>();
 
-
-	private string GetNextWaveName() {
-		// for now, we will just continue to repeat the last level & wave ad infinitum
-		int levelIndex = Mathf.Clamp(m_levelManager.CurrentLevel, 0, m_waves.Length - 1);
-		int waveIndex = Mathf.Clamp(m_currentWave, 0, m_waves[levelIndex].Length - 1);
-
-		string result = m_waves[levelIndex][waveIndex];
-		return result;
+		int l = config.WaveNames.Count;
+		m_waveNames = new string[l][];
+		for (int i = 0; i < l; i++) {
+			m_waveNames[i] = (string[]) ((ArrayList)config.WaveNames[i]).ToArray(typeof(string));
+		}
 	}
 
+	private string GetNextWaveName() {
+		string result = m_waveNames[m_levelManager.CurrentLevel][m_currentWave];
+		return result;
+	}
 
 	private void SpawnNextWave() {
 		string waveName = GetNextWaveName();
@@ -50,16 +52,9 @@ public class WaveManager : MonoBehaviour {
 	}
 
 	private void WaveCompleted() {
-
+		print("Wave complete = " + m_currentWave);
 		m_currentWave++;
-
-		print("Wave complete - next wave = " + m_currentWave);
-
-		// for now, we will just continue to repeat the last level & wave ad infinitum
-		int levelIndex = Mathf.Clamp(m_levelManager.CurrentLevel, 0, m_waves.Length - 1);
-		print("levelIndex = " + levelIndex);
-
-		if (m_currentWave >= m_waves[levelIndex].Length) {
+		if (m_currentWave == m_waveNames[m_levelManager.CurrentLevel].Length) {
 			m_currentWave = 0;
 			SendMessage("LevelCompleted", SendMessageOptions.DontRequireReceiver);
 		} else {

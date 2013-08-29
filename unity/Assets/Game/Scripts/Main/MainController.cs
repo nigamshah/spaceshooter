@@ -28,4 +28,7 @@ public class MainController : MonoBehaviour {
 	private void GameOver() {
 		print("GameOver");
 	}
+	private void GameWon() {
+		print("GameWon");
+	}
 }

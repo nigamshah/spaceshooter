@@ -1,0 +1,7 @@
+{
+	"waves" : [
+		["EnemyWave_1.1", "EnemyWave_1.1", "EnemyWave_1.1"],
+		["EnemyWave_1.1", "EnemyWave_1.1"]
+	],
+	"levelDelay" : 5.0 
+}
