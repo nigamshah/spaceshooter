@@ -37,7 +37,7 @@ public class Formation : MonoBehaviour {
 		BroadcastMessage("FormationSet", SendMessageOptions.DontRequireReceiver);
 	}
 
-	private void EnemyDestroyed(GameObject enemy) {
+	private void SpacecraftDestroyed(GameObject enemy) {
 		Transform trans = enemy.transform;
 		m_enemies.Remove(enemy);
 
@@ -49,6 +49,7 @@ public class Formation : MonoBehaviour {
 	}
 
 	private void Reset() {
+
 		m_top = m_enemies[0].transform;
 		m_bottom = m_enemies[0].transform;
 		m_left = m_enemies[0].transform;

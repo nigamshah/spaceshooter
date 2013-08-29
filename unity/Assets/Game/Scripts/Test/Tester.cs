@@ -13,8 +13,16 @@ public class Tester : MonoBehaviour {
 		print("Tester.Start()");
 
 		// get it started
-		SendMessage("SpawnNextWave");
 
+		Invoke("SpawnHero", 0.5f);
+		Invoke("SpawnFirstWave", 1.0f);
+	}
+
+	void SpawnHero() {
+		SendMessage("SpawnHero");
+	}
+	void SpawnFirstWave() {
+		SendMessage("SpawnNextWave");
 	}
 	
 	// Update is called once per frame

@@ -39,7 +39,7 @@ public class MovementPatternAlpha : MonoBehaviour {
 
 
 		m_direction = new Vector3(x, y, 0);
-		print("ResetDirection - " + name + " / " + m_direction);
+		//print("ResetDirection - " + name + " / " + m_direction);
 	}
 
 	// Update is called once per frame

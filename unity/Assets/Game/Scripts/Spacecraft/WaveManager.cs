@@ -3,8 +3,8 @@ using System.Collections;
 
 public class WaveManager : MonoBehaviour {
 
-	private const string ENEMY_WAVE_PATH = "Prefabs/Enemies/";
-	private const string ENEMY_SPAWN_POINT_TAG = "EnemySpawnPoint";
+	private const string ENEMY_WAVE_PATH = "Prefabs/EnemyWaves/";
+	private const string SPAWN_POINT_TAG = "EnemySpawnPoint";
 
 	private int m_currentWave = 0;
 	private string[][] m_waves;
@@ -15,7 +15,7 @@ public class WaveManager : MonoBehaviour {
 
 	void Awake() {
 		m_waves = new string[2][];
-		m_waves[0] = new string[] {"EnemyWave_1.3", "EnemyWave_1.2", "EnemyWave_1.3"};
+		m_waves[0] = new string[] {"EnemyWave_1.1", "EnemyWave_1.2", "EnemyWave_1.3"};
 		m_waves[1] = new string[] {"EnemyWave_1.2", "EnemyWave_1.3"};
 		m_levelManager = GetComponent<LevelManager>();
 	}
@@ -35,7 +35,7 @@ public class WaveManager : MonoBehaviour {
 		string waveName = GetNextWaveName();
 
 		// there must be at least 1
-		GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(ENEMY_SPAWN_POINT_TAG);
+		GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(SPAWN_POINT_TAG);
 		if (spawnPoints.Length == 0) {
 			Debug.LogError("There must be at least one EnemySpawnPoint in the scene");
 			return;

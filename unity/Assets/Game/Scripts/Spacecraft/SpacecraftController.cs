@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyController : MonoBehaviour {
+public class SpacecraftController : MonoBehaviour {
 
 	public GameObject SpawnEffect;
 	public GameObject KillEffect;
@@ -10,13 +10,14 @@ public class EnemyController : MonoBehaviour {
 	void Start() {
 		if (SpawnEffect != null) {
 			// instantiate spawn effect
+			renderer.enabled = false;
+			Instantiate(SpawnEffect, transform.position, transform.rotation);
+			Invoke("Show", 0.25f);
 		}
-	
 	}
-	
-	// Update is called once per frame
-	void Update() {
-		
+
+	private void Show() {
+		renderer.enabled = true;
 	}
 
 	void DirectHit() {
@@ -25,7 +26,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Die() {
-		SendMessageUpwards("EnemyDestroyed", gameObject, SendMessageOptions.DontRequireReceiver);
+		SendMessageUpwards("SpacecraftDestroyed", gameObject, SendMessageOptions.DontRequireReceiver);
 		if (KillEffect != null) {
 			Instantiate(KillEffect, transform.position, transform.rotation);
 		}

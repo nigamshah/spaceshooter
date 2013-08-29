@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Armor : MonoBehaviour {
 
-	public int StartingArmorPoints = 100;
+	public int StartingArmorPoints = 10;
 
 	private float m_armorPoints;
 

@@ -1,5 +1,5 @@
 using System;
 
-public enum FireAxis {
+public enum FireControl {
 	Fire1, Fire2, Fire3
 }
