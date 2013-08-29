@@ -19,10 +19,12 @@ public class Tester : MonoBehaviour {
 	}
 
 	void SpawnHero() {
-		SendMessage("SpawnHero");
+		print("SpawnHero delayed");
+		//SendMessage("SpawnHero", SendMessageOptions.DontRequireReceiver);
 	}
 	void SpawnFirstWave() {
-		SendMessage("SpawnNextWave");
+		print("SpawnFirstWave delayed");
+		//SendMessage("SpawnNextWave");
 	}
 	
 	// Update is called once per frame
