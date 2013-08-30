@@ -21,7 +21,6 @@ public class HeroManager : MonoBehaviour {
 	}
 
 	private void SpawnHero() {
-		print("HeroManager.SpawnHero");
 		// there must be at least 1
 		GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(SPAWN_POINT_TAG);
 		if (spawnPoints.Length == 0) {

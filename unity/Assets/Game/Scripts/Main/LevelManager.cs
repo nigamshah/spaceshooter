@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour {
 		if (m_currentLevel > m_maxLevel) {
 			SendMessage("GameWon", SendMessageOptions.DontRequireReceiver);
 		} else {
+			SendMessage("DoCallout", "LEVEL COMPLETE, GOOD JOB!", SendMessageOptions.DontRequireReceiver);
 			Invoke("StartNextLevel", m_levelDelay);
 		}
 	}

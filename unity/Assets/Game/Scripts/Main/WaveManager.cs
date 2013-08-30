@@ -58,7 +58,8 @@ public class WaveManager : MonoBehaviour {
 			m_currentWave = 0;
 			SendMessage("LevelCompleted", SendMessageOptions.DontRequireReceiver);
 		} else {
-			SendMessage("DoCallout", "INCOMING WAVE", SendMessageOptions.DontRequireReceiver);
+			string msg = destroyed ? "WAVE DESTROYED - NICE!" : "WAVE PASSED";
+			SendMessage("DoCallout", msg, SendMessageOptions.DontRequireReceiver);
 			Invoke("SpawnNextWave", 3.0f);
 		}
 	}
