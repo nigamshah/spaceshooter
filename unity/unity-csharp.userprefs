@@ -1,32 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Main/WaveManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Spacecraft/Spacecraft.cs">
     <Files>
-      <File FileName="Assets/Game/Scripts/Main/WaveManager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Game/Scripts/Main/MainController.cs" Line="4" Column="1" />
-      <File FileName="Assets/Game/Scripts/Main/LevelManager.cs" Line="40" Column="1" />
-      <File FileName="Assets/Game/Scripts/Main/HUD.cs" Line="4" Column="1" />
+      <File FileName="Assets/Game/Scripts/Weapons/Freeze.cs" Line="9" Column="20" />
+      <File FileName="Assets/Game/Scripts/Spacecraft/Spacecraft.cs" Line="33" Column="142" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp-vs" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Game" expanded="True">
-                <Node name="Resources" expanded="True">
-                  <Node name="Config" expanded="True" />
-                </Node>
-                <Node name="Scripts" expanded="True">
-                  <Node name="Main" expanded="True">
-                    <Node name="WaveManager.cs" selected="True" />
-                  </Node>
-                  <Node name="Spacecraft" expanded="True" />
-                  <Node name="Weapons" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

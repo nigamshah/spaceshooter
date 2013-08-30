@@ -30,7 +30,7 @@ public class Spacecraft : MonoBehaviour {
 		SendMessage("DisableMovement", SendMessageOptions.DontRequireReceiver);
 
 		if (rigidbody != null) {
-			rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+			rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
 		}
 		transform.parent = null;
 	}
