@@ -35,7 +35,8 @@ public class WaveManager : MonoBehaviour {
 		return result;
 	}
 
-	private void SpawnNextWave() {
+	public void SpawnNextWave() {
+		print("Spawning Wave " + m_levelManager.CurrentLevel + "." + m_currentWave);
 		string waveName = GetNextWaveName();
 
 		// there must be at least 1
@@ -61,9 +62,10 @@ public class WaveManager : MonoBehaviour {
 			m_currentWave = 0;
 			SendMessage("LevelCompleted", SendMessageOptions.DontRequireReceiver);
 		} else {
+			SendMessage("DestroyAllEnemies", SendMessageOptions.DontRequireReceiver);
 			string msg = destroyed ? "WAVE DESTROYED - NICE!" : "WAVE PASSED";
 			SendMessage("DoCallout", msg, SendMessageOptions.DontRequireReceiver);
-			Invoke("SpawnNextWave", 3.0f);
+			Invoke("SpawnNextWave", 5.0f);
 		}
 	}
 }

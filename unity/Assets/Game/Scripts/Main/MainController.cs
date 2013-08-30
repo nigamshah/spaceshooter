@@ -45,12 +45,21 @@ public class MainController : MonoBehaviour {
 		Invoke("StartGame", 6.0f);
 	}
 
-	private void DestroySpacecraft() {
+
+	private void DestroyAllEnemies() {
 		GameObject[] waves = GameObject.FindGameObjectsWithTag("EnemyWave");
 		foreach(GameObject wave in waves) {
 			Destroy(wave);
 		}
 		
+		// stray enemies
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach(GameObject enemy in enemies) {
+			Destroy(enemy);
+		}
+	}
+	private void DestroySpacecraft() {
+		DestroyAllEnemies();
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		if (player != null) {
 			Destroy(player);

@@ -28,13 +28,13 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	private void LevelCompleted() {
-		print("level " + m_currentLevel + " completed");
 		m_currentLevel++;
 		ApplyLevelBonuses();
 		if (m_currentLevel > m_maxLevel) {
 			SendMessage("GameWon", SendMessageOptions.DontRequireReceiver);
 		} else {
 			SendMessage("DoCallout", "LEVEL COMPLETE, GOOD JOB!", SendMessageOptions.DontRequireReceiver);
+			SendMessage("DestroyAllEnemies", SendMessageOptions.DontRequireReceiver);
 			Invoke("StartNextLevel", m_levelDelay);
 		}
 	}
@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	private void StartNextLevel() {
-		SendMessage("SpawnNextWave", SendMessageOptions.DontRequireReceiver);
+		GetComponent<WaveManager>().SpawnNextWave();
 	}
 
 

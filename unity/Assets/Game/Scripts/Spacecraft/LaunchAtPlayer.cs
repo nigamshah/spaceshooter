@@ -27,7 +27,7 @@ public class LaunchAtPlayer : MonoBehaviour {
 	private void FireWeapon(FireCommand command) {
 		if (!m_launched && command.FireControlString == m_fireControlString) {
 			SendMessage("StopMoving");
-			rigidbody.constraints = RigidbodyConstraints.None;
+			rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
 			rigidbody.AddForce(Vector3.down * 2f, ForceMode.Impulse);
 			m_launched = true;
 			this.enabled = true;

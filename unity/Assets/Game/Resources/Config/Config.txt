@@ -1,10 +1,10 @@
 {
 	"waves" : [
-		["EnemyWave_1.1", "EnemyWave_1.1", "EnemyWave_1.1"],
+		["EnemyWave_2.3"],
 		["EnemyWave_1.1", "EnemyWave_1.1"]
 	],
 	"levelDelay" : 5.0,
-	"startingLives" : 2,
+	"startingLives" : 5,
 	"levelBonuses" : {
 		"lives" : [1, 1, 2],
 		"score" : [1000, 2500, 5000],

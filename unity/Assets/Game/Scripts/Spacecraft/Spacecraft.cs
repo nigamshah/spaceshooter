@@ -35,13 +35,21 @@ public class Spacecraft : MonoBehaviour {
 	}
 
 	public void StopMoving() {
-		print("StopMoving");
 		SendMessageUpwards("SpacecraftRemoved", gameObject, SendMessageOptions.DontRequireReceiver);
 		SendMessage("DisableMovement", SendMessageOptions.DontRequireReceiver);
+
+		if (rigidbody != null) {
+			rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+		}
 		transform.parent = null;
 	}
 	public void StartMoving() {
 		transform.parent = m_initialParent;
+		if (rigidbody != null) {
+			rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+		}
+
+
 		SendMessageUpwards("SpacecraftAdded", gameObject, SendMessageOptions.DontRequireReceiver);
 		SendMessage("EnableMovement", SendMessageOptions.DontRequireReceiver);
 	}
