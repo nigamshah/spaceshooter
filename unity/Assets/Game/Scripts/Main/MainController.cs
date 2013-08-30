@@ -15,6 +15,8 @@ public class MainController : MonoBehaviour {
 	}
 
 	private void StartGame() {
+		CancelInvoke();
+
 		// get it started
 		BroadcastMessage("ResetGame");
 		Invoke("SpawnFirstHero", 1f);

@@ -24,6 +24,8 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	private void ResetGame() {
+		CancelInvoke();
+		print("Level Mananger ResetGame");
 		m_currentLevel = 0;
 	}
 
@@ -35,6 +37,7 @@ public class LevelManager : MonoBehaviour {
 		} else {
 			SendMessage("DoCallout", "LEVEL COMPLETE, GOOD JOB!", SendMessageOptions.DontRequireReceiver);
 			SendMessage("DestroyAllEnemies", SendMessageOptions.DontRequireReceiver);
+			print("LEVEL COMPLETE, " + m_currentLevel);
 			Invoke("StartNextLevel", m_levelDelay);
 		}
 	}
@@ -44,6 +47,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	private void StartNextLevel() {
+		print("StartNextLevel");
 		GetComponent<WaveManager>().SpawnNextWave();
 	}
 

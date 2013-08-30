@@ -106,4 +106,7 @@ public class Formation : MonoBehaviour {
 		return result;
 	}
 
+	void OnDestroy() {
+		CancelInvoke();
+	}
 }

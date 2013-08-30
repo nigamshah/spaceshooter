@@ -1,7 +1,7 @@
 {
 	"waves" : [
-		["EnemyWave_2.3"],
-		["EnemyWave_1.1", "EnemyWave_1.1"]
+		["EnemyWave_1.1", "EnemyWave_1.2", "EnemyWave_1.3"],
+		["EnemyWave_2.1", "EnemyWave_2.2", "EnemyWave_2.3"]
 	],
 	"levelDelay" : 5.0,
 	"startingLives" : 5,

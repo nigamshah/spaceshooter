@@ -48,8 +48,6 @@ public class Spacecraft : MonoBehaviour {
 		if (rigidbody != null) {
 			rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 		}
-
-
 		SendMessageUpwards("SpacecraftAdded", gameObject, SendMessageOptions.DontRequireReceiver);
 		SendMessage("EnableMovement", SendMessageOptions.DontRequireReceiver);
 	}
@@ -75,5 +73,8 @@ public class Spacecraft : MonoBehaviour {
 			Instantiate(KillEffect, transform.position, transform.rotation);
 		}
 		Destroy(gameObject);
+	}
+	void OnDestroy() {
+		CancelInvoke();
 	}
 }
