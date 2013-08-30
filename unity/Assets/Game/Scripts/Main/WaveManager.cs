@@ -6,12 +6,10 @@ public class WaveManager : MonoBehaviour {
 
 	private const string ENEMY_WAVE_PATH = "Prefabs/EnemyWaves/";
 	private const string SPAWN_POINT_TAG = "EnemySpawnPoint";
-
-	private int m_currentWave = 0;
-
+	
 	private string[][] m_waveNames;
-
 	private LevelManager m_levelManager;
+	private int m_currentWave = 0;
 
 	// Use this for initialization
 
@@ -26,6 +24,10 @@ public class WaveManager : MonoBehaviour {
 		for (int i = 0; i < l; i++) {
 			m_waveNames[i] = (string[]) ((ArrayList)config.WaveNames[i]).ToArray(typeof(string));
 		}
+	}
+
+	private void ResetGame() {
+		m_currentWave = 0;
 	}
 
 	private string GetNextWaveName() {

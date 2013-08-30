@@ -18,7 +18,7 @@ public class HUD : MonoBehaviour {
 		m_calloutLabel.text = "";
 	}
 
-	void Start() {
+	private void ResetGame() {
 		DoCallout("INCOMING WAVE");
 	}
 
@@ -33,7 +33,7 @@ public class HUD : MonoBehaviour {
 	private void DoCallout(string callout) {
 		DoCallout(callout, 3.0f);
 	}
-	private void DoCallout(string callout, float time) {
+	public void DoCallout(string callout, float time) {
 		m_calloutLabel.text = callout;
 
 		if (time > 0) {
@@ -43,6 +43,7 @@ public class HUD : MonoBehaviour {
 	private void ClearCalloutText() {
 		m_calloutLabel.text = "";
 	}
+
 
 
 }

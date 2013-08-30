@@ -23,6 +23,10 @@ public class LevelManager : MonoBehaviour {
 		m_levelBonuses = config.LevelBonuses;
 	}
 
+	private void ResetGame() {
+		m_currentLevel = 0;
+	}
+
 	private void LevelCompleted() {
 		print("level " + m_currentLevel + " completed");
 		m_currentLevel++;

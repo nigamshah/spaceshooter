@@ -16,6 +16,8 @@ public class HeroManager : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		m_scoreCalculator = GetComponent<ScoreCalculator>();
+	}
+	private void ResetGame() {
 		SetLives(GetComponent<Config>().StartingLives);
 		SetScore(0);
 	}
