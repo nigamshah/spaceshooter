@@ -35,7 +35,6 @@ public class FormationMovementHorizontal : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
 		// if at either edge change direction
 		if (m_formation.IsAtEdge()) {
 			m_direction *= -1;
@@ -43,11 +42,8 @@ public class FormationMovementHorizontal : MonoBehaviour {
 		}
 
 		// do the horizontal translation
-		Vector3 currentPosition = transform.position;
-
 		float translation = m_direction * m_currentSpeed * Time.deltaTime;
-		currentPosition.x += translation;
-		transform.position = currentPosition;
+		transform.Translate(translation, 0, 0);
 	}
 	
 	private void ResetSpeed() {

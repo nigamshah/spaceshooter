@@ -35,6 +35,7 @@ public class Spacecraft : MonoBehaviour {
 	}
 
 	public void StopMoving() {
+		print("StopMoving");
 		SendMessageUpwards("SpacecraftRemoved", gameObject, SendMessageOptions.DontRequireReceiver);
 		SendMessage("DisableMovement", SendMessageOptions.DontRequireReceiver);
 		transform.parent = null;

@@ -15,7 +15,6 @@ public class Projectile : MonoBehaviour {
 		if (MuzzleFire != null) {
 			Instantiate(MuzzleFire, transform.position, transform.rotation);
 		}
-		//rigidbody.AddForce(transform.up * ImpulseForce, ForceMode.Impulse);
 	}
 
 	void OnCollisionEnter() {

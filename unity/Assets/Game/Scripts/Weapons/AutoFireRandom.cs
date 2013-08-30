@@ -47,7 +47,7 @@ public class AutoFireRandom : MonoBehaviour {
 
 	bool ShouldFire() {
 		RaycastHit hit;
-		if (Physics.Raycast(transform.position, -Vector3.up, out hit)) {
+		if (Physics.Raycast(transform.position, Vector3.down, out hit)) {
 			bool hitEnemy = hit.collider.CompareTag("Enemy");
 			if (hitEnemy) return false;
 		}
