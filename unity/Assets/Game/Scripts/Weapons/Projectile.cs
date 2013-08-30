@@ -7,7 +7,6 @@ public class Projectile : MonoBehaviour {
 	public GameObject Explosion;
 
 	// default values -- different for each type of projectile
-	public float ImpulseForce = 10.0f;
 	public float Damage = 1.0f;
 
 	// Use this for initialization

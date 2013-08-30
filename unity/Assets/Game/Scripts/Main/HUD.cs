@@ -9,8 +9,6 @@ public class HUD : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		print("Awake");
-
 		m_scoreLabel = GameObject.Find("Score").guiText;
 		m_livesLabel = GameObject.Find("Lives").guiText;
 		m_calloutLabel = GameObject.Find("Callout").guiText;
@@ -21,7 +19,6 @@ public class HUD : MonoBehaviour {
 	}
 
 	void Start() {
-		print("Start");
 		DoCallout("INCOMING WAVE");
 	}
 

@@ -10,6 +10,7 @@ public class Formation : MonoBehaviour {
 	public const float MAX_Y = 7.5F;
 	
 	private List<GameObject> m_enemies;
+	private List<GameObject> m_enemiesToIgnore;
 
 	private Transform m_left;
 	private Transform m_right;
@@ -33,41 +34,53 @@ public class Formation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_enemies = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
-		Reset();
+		m_enemiesToIgnore = new List<GameObject>();
+		ResetFormation();
 		BroadcastMessage("FormationSet", SendMessageOptions.DontRequireReceiver);
 	}
 
 	private void SpacecraftDestroyed(GameObject enemy) {
+		print("SpacecraftDestroyed");
 		Transform trans = enemy.transform;
 		m_enemies.Remove(enemy);
 
 		if (m_enemies.Count == 0) {
 			FormationDestroyed();
 		} else if (trans == m_left || trans == m_right || trans == m_bottom) {
-			Reset();
+			ResetFormation();
 		}
 	}
 
-	private void Reset() {
+	private void SpacecraftAdded(GameObject enemy) {
+		m_enemiesToIgnore.Remove(enemy);
+		ResetFormation();
+	}
+	private void SpacecraftRemoved(GameObject enemy) {
+		m_enemiesToIgnore.Add(enemy);
+		ResetFormation();
+	}
 
-		m_top = m_enemies[0].transform;
-		m_bottom = m_enemies[0].transform;
-		m_left = m_enemies[0].transform;
-		m_right = m_enemies[0].transform;
+	private void ResetFormation() {
+		m_top = null;
+		m_bottom = null;
+		m_left = null;
+		m_right = null;
 
-		for (int i = 1; i < m_enemies.Count; i++) {
+		for (int i = 0; i < m_enemies.Count; i++) {
+			if (m_enemiesToIgnore.Contains(m_enemies[i])) continue;
+
 			Transform trans = m_enemies[i].transform;
-			if (trans.position.y > m_top.position.y) {
+			if (m_top == null || trans.position.y > m_top.position.y) {
 				m_top = trans;
 			}
-			if (trans.position.y < m_bottom.position.y) {
+			if (m_bottom == null || trans.position.y < m_bottom.position.y) {
 				m_bottom = trans;
 			}
 
-			if (trans.position.x < m_left.position.x) {
+			if (m_left == null || trans.position.x < m_left.position.x) {
 				m_left = trans;
 			}
-			if (trans.position.x > m_right.position.x) {
+			if (m_right == null || trans.position.x > m_right.position.x) {
 				m_right = trans;
 			}
 		}
@@ -75,13 +88,12 @@ public class Formation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Top.position.y <= MIN_Y) {
+		if (Top != null && Top.position.y <= MIN_Y) {
 			FormationPassed();
 		}
 	}
 
 	private void FormationPassed() {
-		print("Formation Passed");
 		SendMessageUpwards("WaveCompleted", false, SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);
 	}
@@ -91,7 +103,7 @@ public class Formation : MonoBehaviour {
 	}
 
 	public bool IsAtEdge() {
-		bool result = (Left.position.x <= MIN_X || Right.position.x >= MAX_X);
+		bool result = ((Left != null && Left.position.x <= MIN_X) || (Right != null && Right.position.x >= MAX_X));
 		return result;
 	}
 

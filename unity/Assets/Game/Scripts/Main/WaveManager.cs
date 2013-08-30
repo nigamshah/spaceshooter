@@ -49,6 +49,8 @@ public class WaveManager : MonoBehaviour {
 
 		GameObject wave = (GameObject) Instantiate(Resources.Load(ENEMY_WAVE_PATH + waveName, typeof(GameObject)), position, rotation);
 		wave.transform.parent = transform;
+
+		BroadcastMessage("ResetAmmo", SendMessageOptions.DontRequireReceiver);
 	}
 
 	private void WaveCompleted(bool destroyed) {

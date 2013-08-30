@@ -9,6 +9,7 @@ public class Spacecraft : MonoBehaviour {
 	public GameObject KillEffect;
 
 	private bool m_hasArmor = false;
+	private Transform m_initialParent;
 
 	// Use this for initialization
 	void Start() {
@@ -18,6 +19,7 @@ public class Spacecraft : MonoBehaviour {
 			Instantiate(SpawnEffect, transform.position, transform.rotation);
 			Invoke("Show", 0.25f);
 		}
+		m_initialParent = transform.parent;
 	}
 
 	private void Show() {
@@ -30,6 +32,15 @@ public class Spacecraft : MonoBehaviour {
 
 	private void ArmorFailed() {
 		m_hasArmor = false;
+	}
+
+	private void DisableMovement() {
+		SendMessageUpwards("SpacecraftRemoved", gameObject, SendMessageOptions.DontRequireReceiver);
+		transform.parent = null;
+	}
+	private void EnableMovement() {
+		transform.parent = m_initialParent;
+		SendMessageUpwards("SpacecraftAdded", gameObject, SendMessageOptions.DontRequireReceiver);
 	}
 
 	void OnCollisionEnter(Collision collision) {
@@ -47,6 +58,7 @@ public class Spacecraft : MonoBehaviour {
 
 
 	private void DirectHit() {
+		transform.parent = m_initialParent;
 		SendMessageUpwards("SpacecraftDestroyed", gameObject, SendMessageOptions.DontRequireReceiver);
 		if (KillEffect != null) {
 			Instantiate(KillEffect, transform.position, transform.rotation);

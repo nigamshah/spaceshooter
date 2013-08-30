@@ -1,18 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Main/HUD.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Weapons/Freeze.cs">
     <Files>
-      <File FileName="Assets/Game/Scripts/Main/Config.cs" Line="47" Column="13" />
-      <File FileName="Assets/Game/Resources/Config/Config.txt" Line="13" Column="18" />
-      <File FileName="Assets/Game/Scripts/Main/ScoreCalculator.cs" Line="18" Column="28" />
-      <File FileName="Assets/Game/Scripts/Utils/SpacecraftType.cs" Line="5" Column="2" />
-      <File FileName="Assets/Game/Scripts/Main/HeroManager.cs" Line="56" Column="1" />
-      <File FileName="Assets/Game/Scripts/Spacecraft/Spacecraft.cs" Line="4" Column="24" />
-      <File FileName="Assets/Game/Scripts/Spacecraft/Armor.cs" Line="15" Column="1" />
-      <File FileName="Assets/Game/Scripts/Main/WaveManager.cs" Line="58" Column="22" />
-      <File FileName="Assets/Game/Scripts/Spacecraft/Formation.cs" Line="5" Column="1" />
-      <File FileName="Assets/Game/Scripts/Main/HUD.cs" Line="28" Column="1" />
-      <File FileName="Assets/Game/Scripts/Main/LevelManager.cs" Line="35" Column="4" />
+      <File FileName="Assets/Game/Scripts/Main/WaveManager.cs" Line="53" Column="3" />
+      <File FileName="Assets/Game/Scripts/Weapons/Weapon.cs" Line="34" Column="15" />
+      <File FileName="Assets/Game/Scripts/Weapons/Projectile.cs" Line="28" Column="1" />
+      <File FileName="Assets/Game/Scripts/Main/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game/Resources/Config/Config.txt" Line="1" Column="1" />
+      <File FileName="Assets/Game/Scripts/Weapons/Freeze.cs" Line="6" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,10 +19,10 @@
                   <Node name="Config" expanded="True" />
                 </Node>
                 <Node name="Scripts" expanded="True">
-                  <Node name="Main" expanded="True">
-                    <Node name="HUD.cs" selected="True" />
+                  <Node name="Main" expanded="True" />
+                  <Node name="Weapons" expanded="True">
+                    <Node name="Freeze.cs" selected="True" />
                   </Node>
-                  <Node name="Spacecraft" expanded="True" />
                 </Node>
               </Node>
             </Node>

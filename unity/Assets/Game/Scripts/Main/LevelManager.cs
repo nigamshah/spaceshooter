@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	private void ApplyLevelBonuses() {
-
+		print("Apply Level Bonuses");
 	}
 
 	private void StartNextLevel() {
