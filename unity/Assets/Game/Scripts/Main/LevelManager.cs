@@ -22,12 +22,17 @@ public class LevelManager : MonoBehaviour {
 	private void LevelCompleted() {
 		print("level completed, level = " + m_currentLevel);
 		m_currentLevel++;
+
 		if (m_currentLevel > m_config.MaxLevel) {
 			SendMessage("GameWon", SendMessageOptions.DontRequireReceiver);
 		} else {
 			print("level Delay = " + m_config.LevelDelay);
 			Invoke("StartNextLevel", m_config.LevelDelay);
 		}
+	}
+
+	private void ApplyLevelBonuses() {
+
 	}
 
 	private void StartNextLevel() {

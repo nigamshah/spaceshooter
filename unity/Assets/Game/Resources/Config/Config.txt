@@ -3,5 +3,10 @@
 		["EnemyWave_1.1", "EnemyWave_1.1", "EnemyWave_1.1"],
 		["EnemyWave_1.1", "EnemyWave_1.1"]
 	],
-	"levelDelay" : 5.0 
+	"levelDelay" : 5.0,
+	"startingLives" : 2,
+	"levelBonuses" : {
+		"lives" : [1, 1, 2],
+		"score" : [100, 200, 300]
+	}
 }

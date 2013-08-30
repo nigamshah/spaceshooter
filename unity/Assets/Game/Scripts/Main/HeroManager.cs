@@ -6,13 +6,13 @@ public class HeroManager : MonoBehaviour {
 	private const string SPAWN_POINT_TAG = "HeroSpawnPoint";
 
 	public GameObject HeroTemplate;
-	public int LivesRemaining = 3;
 	public float SpawnDelay = 0.5f;
 
+	private int m_livesRemaining = 0;
 
 	// Use this for initialization
-	void Awake() {
-	
+	void Start() {
+		SetLives(GetComponent<Config>().StartingLives);
 	}
 
 	private void SpawnHero() {
@@ -34,12 +34,21 @@ public class HeroManager : MonoBehaviour {
 
 	private void SpacecraftDestroyed(GameObject craft) {
 		if (craft.CompareTag("Player")) {
-			LivesRemaining--;
-			if (LivesRemaining == 0) {
+			AddLives(-1);
+			if (m_livesRemaining == 0) {
 				SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
 			} else {
 				Invoke("SpawnHero", SpawnDelay);
 			}
 		}
+	}
+
+	private void SetLives(int lives) {
+		m_livesRemaining = lives;
+		SendMessage("LivesUpdated", m_livesRemaining, SendMessageOptions.DontRequireReceiver);
+	}
+
+	private void AddLives(int numToAdd) {
+		SetLives(m_livesRemaining + numToAdd);
 	}
 }

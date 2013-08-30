@@ -13,8 +13,12 @@ public class HUD : MonoBehaviour {
 		m_livesLabel = GameObject.Find("Lives").guiText;
 		m_calloutLabel = GameObject.Find("Callout").guiText;
 
+		m_scoreLabel.text = "";
+		m_livesLabel.text = "";
+		m_calloutLabel.text = "";
+
+		// tmp
 		SetScoreText(0);
-		SetLivesText(3);
 
 		DoCallout("INCOMING WAVE", 3);
 	}
@@ -23,7 +27,7 @@ public class HUD : MonoBehaviour {
 		m_scoreLabel.text = "SCORE : " + score;
 	}
 
-	private void SetLivesText(int lives) {
+	private void LivesUpdated(int lives) {
 		m_livesLabel.text = "LIVES : " + lives;
 	}
 	private void SetCalloutText(string callout) {
