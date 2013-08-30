@@ -40,7 +40,6 @@ public class Formation : MonoBehaviour {
 	}
 
 	private void SpacecraftDestroyed(GameObject enemy) {
-		print("SpacecraftDestroyed");
 		Transform trans = enemy.transform;
 		m_enemies.Remove(enemy);
 

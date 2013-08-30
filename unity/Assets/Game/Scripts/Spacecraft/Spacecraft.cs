@@ -34,13 +34,15 @@ public class Spacecraft : MonoBehaviour {
 		m_hasArmor = false;
 	}
 
-	private void DisableMovement() {
+	public void StopMoving() {
 		SendMessageUpwards("SpacecraftRemoved", gameObject, SendMessageOptions.DontRequireReceiver);
+		SendMessage("DisableMovement", SendMessageOptions.DontRequireReceiver);
 		transform.parent = null;
 	}
-	private void EnableMovement() {
+	public void StartMoving() {
 		transform.parent = m_initialParent;
 		SendMessageUpwards("SpacecraftAdded", gameObject, SendMessageOptions.DontRequireReceiver);
+		SendMessage("EnableMovement", SendMessageOptions.DontRequireReceiver);
 	}
 
 	void OnCollisionEnter(Collision collision) {

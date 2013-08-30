@@ -54,7 +54,6 @@ public class WaveManager : MonoBehaviour {
 	}
 
 	private void WaveCompleted(bool destroyed) {
-		print("Wave complete = " + m_currentWave + " / destroyed = " + destroyed);
 		m_currentWave++;
 		if (m_currentWave == m_waveNames[m_levelManager.CurrentLevel].Length) {
 			m_currentWave = 0;

@@ -71,5 +71,11 @@ public class MovementPatternAlpha : MonoBehaviour {
 		}
 
 	}
+	void DisableMovement() {
+		this.enabled = false;
+	}
+	void EnableMovement() {
+		this.enabled = true;
+	}
 
 }
