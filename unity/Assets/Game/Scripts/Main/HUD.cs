@@ -17,28 +17,30 @@ public class HUD : MonoBehaviour {
 		m_livesLabel.text = "";
 		m_calloutLabel.text = "";
 
-		// tmp
-		SetScoreText(0);
-
-		DoCallout("INCOMING WAVE", 3);
+		DoCallout("INCOMING WAVE");
 	}
 
-	private void SetScoreText(int score) {
+	private void ScoreUpdated(int score) {
 		m_scoreLabel.text = "SCORE : " + score;
 	}
 
 	private void LivesUpdated(int lives) {
 		m_livesLabel.text = "LIVES : " + lives;
 	}
-	private void SetCalloutText(string callout) {
+
+	private void DoCallout(string callout) {
+		DoCallout(callout, 3.0f);
+	}
+	private void DoCallout(string callout, float time) {
 		m_calloutLabel.text = callout;
+
+		if (time > 0) {
+			Invoke("ClearCalloutText", time);
+		}
 	}
 	private void ClearCalloutText() {
-		SetCalloutText("");
+		m_calloutLabel.text = "";
 	}
 
-	private void DoCallout(string callout, float time = 1.0f) {
-		SetCalloutText(callout);
-		Invoke("ClearCalloutText", time);
-	}
+
 }

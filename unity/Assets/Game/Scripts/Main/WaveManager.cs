@@ -51,14 +51,15 @@ public class WaveManager : MonoBehaviour {
 		wave.transform.parent = transform;
 	}
 
-	private void WaveCompleted() {
-		print("Wave complete = " + m_currentWave);
+	private void WaveCompleted(bool destroyed) {
+		print("Wave complete = " + m_currentWave + " / destroyed = " + destroyed);
 		m_currentWave++;
 		if (m_currentWave == m_waveNames[m_levelManager.CurrentLevel].Length) {
 			m_currentWave = 0;
 			SendMessage("LevelCompleted", SendMessageOptions.DontRequireReceiver);
 		} else {
-			Invoke("SpawnNextWave", 1.0f);
+			SendMessage("DoCallout", "INCOMING WAVE", SendMessageOptions.DontRequireReceiver);
+			Invoke("SpawnNextWave", 3.0f);
 		}
 	}
 }

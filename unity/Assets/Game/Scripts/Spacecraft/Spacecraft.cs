@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpacecraftController : MonoBehaviour {
+public class Spacecraft : MonoBehaviour {
+
+	public SpacecraftType SpacecraftType;
 
 	public GameObject SpawnEffect;
 	public GameObject KillEffect;
@@ -27,7 +29,6 @@ public class SpacecraftController : MonoBehaviour {
 	}
 
 	private void ArmorFailed() {
-		print("ArmorFailed !!!!!");
 		m_hasArmor = false;
 	}
 

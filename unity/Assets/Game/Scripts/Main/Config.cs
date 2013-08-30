@@ -8,7 +8,7 @@ public class Config : MonoBehaviour {
 
 	public ArrayList WaveNames {
 		get {
-			return (ArrayList) m_config["waves"];
+			return m_config["waves"] as ArrayList;
 		}
 	}
 	public int MaxLevel {
@@ -32,6 +32,19 @@ public class Config : MonoBehaviour {
 	public Hashtable LevelBonuses {
 		get {
 			Hashtable result = m_config["levelBonuses"] as Hashtable;
+			return result;
+		}
+	}
+
+	public Hashtable ScoreTable {
+		get {
+			Hashtable result = m_config["scoreTable"] as Hashtable;
+			return result;
+		}
+	}
+	public ArrayList ScoreMultipliers {
+		get {
+			ArrayList result = m_config["scoreMultipliers"] as ArrayList;
 			return result;
 		}
 	}

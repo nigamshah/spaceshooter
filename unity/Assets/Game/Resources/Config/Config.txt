@@ -7,6 +7,14 @@
 	"startingLives" : 2,
 	"levelBonuses" : {
 		"lives" : [1, 1, 2],
-		"score" : [100, 200, 300]
+		"score" : [1000, 2500, 5000],
+	},
+	"scoreMultipliers" : [1, 2, 3],
+	"scoreTable" : {
+		"RedFighter" : 100,
+		"BlueFighter" : 200,
+		"Snapper" : 350,
+		"Hornet" : 500,
+		"Rocket" : 1000
 	}
 }
