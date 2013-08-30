@@ -8,7 +8,6 @@ public class Spacecraft : MonoBehaviour {
 	public GameObject SpawnEffect;
 	public GameObject KillEffect;
 
-	private bool m_hasArmor = false;
 	private Transform m_initialParent;
 
 	// Use this for initialization
@@ -24,14 +23,6 @@ public class Spacecraft : MonoBehaviour {
 
 	private void Show() {
 		renderer.enabled = true;
-	}
-
-	private void EnableArmor() {
-		m_hasArmor = true;
-	}
-
-	private void ArmorFailed() {
-		m_hasArmor = false;
 	}
 
 	public void StopMoving() {
@@ -59,8 +50,7 @@ public class Spacecraft : MonoBehaviour {
 			(collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Enemy"));
 		// ^^ NOTE: I do not want a Direct Hit if it is an Enemy-To-Enemy collision
 
-
-		if (!m_hasArmor || enemyToPlayer) {
+		if (enemyToPlayer) {
 			DirectHit();
 		}
 	}

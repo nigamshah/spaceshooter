@@ -37,7 +37,7 @@ public class WaveManager : MonoBehaviour {
 
 	public void SpawnNextWave() {
 		CancelInvoke("SpawnNextWave");
-		print("Spawning Wave " + m_levelManager.CurrentLevel + "." + m_currentWave);
+		//print("Spawning Wave " + m_levelManager.CurrentLevel + "." + m_currentWave);
 		string waveName = GetNextWaveName();
 
 		// there must be at least 1

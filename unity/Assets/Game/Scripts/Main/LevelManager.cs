@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour {
 
 	private void ResetGame() {
 		CancelInvoke();
-		print("Level Mananger ResetGame");
+		//print("Level Mananger ResetGame");
 		m_currentLevel = 0;
 	}
 
@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	private void ApplyLevelBonuses() {
-		print("Apply Level Bonuses");
+		// TODO: Level Bonuses
 	}
 
 	private void StartNextLevel() {

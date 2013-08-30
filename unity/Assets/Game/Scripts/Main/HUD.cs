@@ -31,6 +31,7 @@ public class HUD : MonoBehaviour {
 	}
 
 	private void DoCallout(string callout) {
+		//print("callout = " + callout);
 		DoCallout(callout, 3.0f);
 	}
 	public void DoCallout(string callout, float time) {

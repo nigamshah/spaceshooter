@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Test/Tester.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Game/Scripts/Main/MainController.cs">
     <Files>
-      <File FileName="Assets/Game/Scripts/Test/Tester.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game/Scripts/Main/MainController.cs" Line="26" Column="33" />
+      <File FileName="Assets/Game/Resources/Config/Config.txt" Line="1" Column="1" />
+      <File FileName="Assets/Game/Scripts/Main/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game/Scripts/Main/WaveManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game/Scripts/Main/HUD.cs" Line="36" Column="1" />
+      <File FileName="Assets/Game/Scripts/Spacecraft/Formation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game/Scripts/Spacecraft/Spacecraft.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,10 +16,14 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Game" expanded="True">
+                <Node name="Resources" expanded="True">
+                  <Node name="Config" expanded="True" />
+                </Node>
                 <Node name="Scripts" expanded="True">
-                  <Node name="Test" expanded="True">
-                    <Node name="Tester.cs" selected="True" />
+                  <Node name="Main" expanded="True">
+                    <Node name="MainController.cs" selected="True" />
                   </Node>
+                  <Node name="Spacecraft" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -23,7 +33,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/nigamshah/Dropbox/work/Arkadium_assignment/spaceshooter/unity/Assets/Game/Scripts/Main/HUD.cs" line="35" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -11,9 +11,6 @@ public class Armor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_armorPoints = (float) StartingArmorPoints;
-		if (m_armorPoints > 0) {
-			SendMessage("EnableArmor");
-		}
 	}
 	
 	void OnCollisionEnter(Collision collision) {
